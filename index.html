@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/custom.css">
-    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="fontAwesome/css/all.css">
 </head>
 
 <body onload="init()">
@@ -82,7 +82,10 @@
             setActiveLink(category);
         }
 
-        function fetchPosts(category) {
+    
+
+
+       function fetchPosts(category) {
             fetch(rootPath + 'get-posts/?category=' + category)
                 .then(function(response) {
                     return response.json();
@@ -91,7 +94,6 @@
                     displayPosts(data);
                 })
         }
-
 
         function displayPosts(data) {
             var output = "";
@@ -131,3 +133,4 @@
 </body>
 
 </html>
+>>
